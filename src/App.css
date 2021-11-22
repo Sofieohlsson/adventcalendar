@@ -1,0 +1,29 @@
+#root {
+  background-color: #d7e3ff;
+}
+
+.App {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.AdventCalendar {
+  background: url(./media/housebackground.png); 
+  background-repeat:no-repeat;
+  background-size:cover; 
+  background-position:center;
+  padding-top: 42%;
+  padding-bottom: 17%;
+  padding-left: 17%;
+  padding-right: 17%;
+}
+
+
+.window {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  height: auto;
+}
+
