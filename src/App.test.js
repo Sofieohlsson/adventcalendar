@@ -4,8 +4,6 @@ import React from 'react';
 
 const RenderImages = props => {
 
-  let stateArray = []; 
-
   let localOpen = window.localStorage.getItem("open"); 
   let localOpenArray = JSON.parse(localOpen); 
   if (localOpenArray === null) {
@@ -17,12 +15,12 @@ const RenderImages = props => {
     let date = new Date().getDate();
     if(date >= e.currentTarget.id.replace(/\D/g, '')) {
       e.currentTarget.src = `/media/window-${e.currentTarget.id.replace(/\D/g, '')}_open.png`
-      if (stateArray.includes(e.currentTarget.id.replace(/\D/g, '')) === false) {
+    }
+          if (localOpenArray.includes(e.currentTarget.id.replace(/\D/g, '')) === false) {
         localOpenArray.push(e.currentTarget.id.replace(/\D/g, '')); 
         localStorage.setItem("open", JSON.stringify(localOpenArray)); 
 
       }
-    }
     
   }
 
