@@ -16,7 +16,7 @@ const RenderImages = props => {
     if(date >= e.currentTarget.id.replace(/\D/g, '')) {
       e.currentTarget.src = `/media/window-${e.currentTarget.id.replace(/\D/g, '')}_open.png`
     }
-          if (localOpenArray.includes(e.currentTarget.id.replace(/\D/g, '')) === false) {
+          if (date >= e.currentTarget.id.replace(/\D/g, '') && localOpenArray.includes(e.currentTarget.id.replace(/\D/g, '')) === false) {
         localOpenArray.push(e.currentTarget.id.replace(/\D/g, '')); 
         localStorage.setItem("open", JSON.stringify(localOpenArray)); 
 
